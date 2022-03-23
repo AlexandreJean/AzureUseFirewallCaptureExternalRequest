@@ -44,13 +44,13 @@ resource "azurerm_public_ip" "bastion" {
   sku                 = "Standard"
 }
 
-resource "azurerm_public_ip" "cycle" {
-  name                = "pip-cycle-${var.prefix}"
-  location            = var.location 
-  resource_group_name = azurerm_resource_group.AzureFirewallCapture.name
-  allocation_method   = "Static"
-  sku                 = "Standard"
-}
+# resource "azurerm_public_ip" "cycle" {
+#   name                = "pip-cycle-${var.prefix}"
+#   location            = var.location 
+#   resource_group_name = azurerm_resource_group.AzureFirewallCapture.name
+#   allocation_method   = "Static"
+#   sku                 = "Standard"
+# }
 
 resource "azurerm_subnet_route_table_association" "ta-admin" {
   subnet_id      = azurerm_subnet.admin.id

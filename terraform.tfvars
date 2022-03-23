@@ -1,6 +1,6 @@
 #terraform.tfvars
-resource_group = "rg-AzureFirewallCapture"
-prefix         = "FirewallCapture"
+resource_group = "rg-AzureFirewall"
+prefix         = "Firewall"
 location       = "westeurope"
 tags = {
 BusinessUnit = "FirewallCaptureTest"
@@ -19,7 +19,7 @@ snet_address_space_firewall       = ["10.6.1.0/26"]
 snet_address_space_bastion        = ["10.6.2.0/26"]
 
 vm_admin_username             = "hpcadmin"
-vm_admin_password             = "toto1234!"
+#vm_admin_password             = ""
 cyclecloud_vm_size            = "Standard_DS2_v2"
 jumpbox_vm_size               = "Standard_D2s_v3"
 vm_managed_disk_type          = "Standard_LRS"
