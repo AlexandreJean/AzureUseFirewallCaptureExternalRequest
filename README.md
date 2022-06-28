@@ -49,8 +49,17 @@ The solution deployed by Terraform won't be ready as it is. You will need to per
 1) Add dashboard 
 
 ## Link the Azure Firewall policy to the VNET
-Unfortunately, at this moment into this tutorial, we need to run some manual action, please follow the step by step below:
-![Firewall Picture #1](/images/screenshot.png)
+Unfortunately, at this moment into this tutorial, we need to run some manual action, please follow the step by step below, and click on the orange square:
+![Firewall Picture #1](/images/Slide1.PNG)
+
+![Firewall Picture #2](/images/Slide2.PNG)
+
+![Firewall Picture #3](/images/Slide3.PNG)
+
+![Firewall Picture #4](/images/Slide4.PNG)
+
+![Firewall Picture #5](/images/Slide5.PNG)
+
 ## Link firewall to log analytics
 ## Add dashboard 
 
