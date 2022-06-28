@@ -12,7 +12,7 @@ For this example, thanks to Terraform you will deploy the following:
     * AzureFirewallSubnet
 * **Azure Route**, will route all the trafic to the Firewall
 * **Azure Bastion**, will be used to connect on the VM if needed
-* **Azure Firewall** with **Azure policy**, will trace/blocks/allow all the requests
+* **Azure Firewall** with **Azure policy**, will trace/block/allow all the requests
 * **Azure CycleCloud** latest, for testing a service
 * **Azure Log Analytics**, will save all the useful for information
 * **Azure workbook**, will display all the access into saved into log Analytics
@@ -35,7 +35,7 @@ By default, with this files you will have
 * 1x route : to redirect all traffic to firewall (file route.tf)
 
 # Deploy solution
-Once you have customize all the files, you can run Terraform commands:
+Once you have customize all the files, you can run Terraform commands, you need to have the azure access configured prior to run the command with the associated rights:
 ```
 terraform init
 terraform plan
@@ -49,7 +49,8 @@ The solution deployed by Terraform won't be ready as it is. You will need to per
 1) Add dashboard 
 
 ## Link the Azure Firewall policy to the VNET
-
+Unfortunately, at this moment into this tutorial, we need to run some manual action, please follow the step by step below:
+![Firewall Picture #1](/images/screenshot.png)
 ## Link firewall to log analytics
 ## Add dashboard 
 
