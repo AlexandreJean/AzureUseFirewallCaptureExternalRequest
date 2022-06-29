@@ -30,7 +30,7 @@ cd AzureUseFirewallCaptureTraffic
 Edit terraform.tfvars or others files, according to your need. Basically you have a file per funtion, if you don't need Bastion you just have to delete bastion.tf etc.
 
 By default, with this files you will have 
-* 1x Aure Firewall Policy application rule : to allow all trafics (file firewall.tf)
+* 1x Aure Firewall Policy application rule : to allow all protocol on 80 and 443 (file firewall.tf)
 * 1x DNAT rule : to redirect HTTS requests to the internal CycleCloud portal (file firewall.tf)
 * 1x route : to redirect all traffic to firewall (file route.tf)
 
@@ -61,9 +61,25 @@ Unfortunately, at this moment into this tutorial, we need to run some manual act
 ![Firewall Picture #5](/images/Slide5.PNG)
 
 ## Link firewall to log analytics
+On the firewall resource go to Diagnostic settings
+
+![Firewall Picture #6](/images/Slide6.PNG)
+
+![Firewall Picture #7](/images/Slide7.PNG)
+
+
 ## Add dashboard 
+* go to this github website: [Deploy a workbook on Azure](https://github.com/Azure/Azure-Network-Security/tree/master/Azure%20Firewall/Workbook%20-%20Azure%20Firewall%20Monitor%20Workbook)
+* click on **Deploy to Azure** select the resource group where you want to deploy the dashboard
+*  click on **Review + create**.
 
+# visualize
 
+If you connect on the virtual machine and you run an ssh command to an IP on internet it will be logged as follow into the dashboard:
+![Firewall Picture #8](/images/Slide8.PNG)
+
+And then scrolldown to see the requests, into the example I tried to ssh a IP:
+![Firewall Picture #9](/images/Slide9.PNG)
 
 # Sources
 See below the sources :
